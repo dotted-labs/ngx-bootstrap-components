@@ -1,0 +1,31 @@
+<div class="border border-dashed py-4 px-5 rounded-2 cursor-pointer position-relative" (click)="!base64 ? fileInput.click() : null">
+  <div class="d-flex flex-column gap-2 justify-content-center align-items-center text-center">
+    <div class="d-flex justify-content-center align-items-center" style="width: 60px; height: 60px">
+      @if (!base64) {
+        <i class="ti ti-cloud-upload" style="font-size: 3rem"></i>
+      } @else {
+        <img [src]="base64" alt="image" class="img-fluid" />
+        <button
+          class="btn btn-outline-danger btn-sm position-absolute"
+          style="top: 1rem; right: 1rem"
+          (click)="clearImage(); $event.stopPropagation()"
+        >
+          <i class="ti ti-trash"></i>
+        </button>
+      }
+    </div>
+
+    <b>{{ 'COMMON.UPLOAD' | translate }}</b>
+    <p class="small text-body-tertiary m-0">{{ 'COMMON.UPLOAD_FILE' | translate: { formats: formats(), maxSize: maxSize() } }}</p>
+  </div>
+  <input
+    #fileInput
+    id="logo"
+    type="file"
+    accept="image/*"
+    [disabled]="disabled"
+    (change)="onInputChange($event)"
+    (blur)="onTouched()"
+    class="d-none"
+  />
+</div>

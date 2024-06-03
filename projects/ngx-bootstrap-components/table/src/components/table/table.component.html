@@ -1,0 +1,40 @@
+@if (error()) {
+  <div class="d-flex justify-content-center w-100 h-100 p-3">
+    <div class="m-0 alert alert-danger w-100" role="alert">
+      <i class="ti ti-alert-hexagon"></i>
+      {{ error() }}
+    </div>
+  </div>
+}
+
+<table class="table table-hover m-0">
+  <thead>
+    <tr>
+      @for (column of columns(); track column) {
+        <th scope="col">{{ column | translate }}</th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    <!--  && isEmpty() -->
+    @if (isLoading()) {
+      @for (column of skeletonRowsArr(); track column) {
+        <tr>
+          @for (column of columns(); track column) {
+            <td>
+              <span class="placeholder-glow">
+                <span class="placeholder col-12"></span>
+              </span>
+            </td>
+          }
+        </tr>
+      }
+    } @else {
+      @for (item of items(); track item) {
+        @if (rowTemplate()) {
+          <ng-container [ngTemplateOutlet]="rowTemplate()" [ngTemplateOutletContext]="{ $implicit: item }"></ng-container>
+        }
+      }
+    }
+  </tbody>
+</table>
