@@ -1,10 +1,10 @@
 {
   "name": "@dotted-labs/ngx-bootstrap-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build ngx-bootstrap-components",
+    "build": "ng build ngx-bootstrap-components && cp *.md dist/ngx-bootstrap-components/",
     "publish": "ng build ngx-bootstrap-components && cd dist/ngx-bootstrap-components && npm publish --access public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

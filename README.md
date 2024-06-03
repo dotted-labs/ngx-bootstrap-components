@@ -34,6 +34,10 @@ The `PaginationComponent` allows users to navigate through pages of data. It sup
 
 To integrate the `PaginationComponent` in your Angular application, you can use the following HTML snippet:
 
+```ts
+import { PaginationComponent } from '@dotted-labs/ngx-bootstrap-components/pagination';
+```
+
 ```html
 <dl-pagination
   [sizeOptions]="[10, 20, 50, 100]"
@@ -67,6 +71,10 @@ The `TableComponent` displays tabular data and includes features like skeleton s
 
 To integrate the `TableComponent` in your Angular application, you can use the following HTML snippet:
 
+```ts
+import { TableComponent } from '@dotted-labs/ngx-bootstrap-components/table';
+```
+
 ```html
 <dl-table
   [items]="items$ | async"
@@ -96,6 +104,10 @@ The `ImgInputComponent` is designed for image file inputs, providing a base64 pr
 #### Example Usage
 
 To integrate the `ImgInputComponent` in your Angular application, you can use the following HTML snippet:
+
+```ts
+import { ImgInputComponent } from '@dotted-labs/ngx-bootstrap-components/img-input';
+```
 
 ```html
 <!-- Without ReactiveForms -->
