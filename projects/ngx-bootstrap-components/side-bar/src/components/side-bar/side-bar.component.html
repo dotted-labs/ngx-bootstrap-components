@@ -10,8 +10,8 @@
         <li class="nav-item">
           <a
             (click)="navigateTo(navItem)"
-            [class.text-opacity-50]="!navItem.active"
-            routerLinkActive="active"
+            [class.text-opacity-50]="!navItem.isEnabled"
+            [class.active]="navItem.url.includes(currentUrl())"
             class="nav-link rounded-2"
             aria-current="page"
           >
