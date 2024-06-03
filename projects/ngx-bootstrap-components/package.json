@@ -1,6 +1,6 @@
 {
   "name": "@dotted-labs/ngx-bootstrap-components",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0",
@@ -14,9 +14,3 @@
   },
   "sideEffects": false
 }
-readme de un proyecto de github de una libreria de angular con 4 componentes integrados con bootstrap, PaginationComponent, TableComponent, ImgInput.
-
-todos los componentes estan integrados con las nuevas signals de angular y con changestrategy on push 
-@pagination.component.ts @table.component.ts @img-input.component.ts 
-
-añade ejemplos para integrarlos en el html para cada componente
