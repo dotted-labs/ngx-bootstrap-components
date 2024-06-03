@@ -10,115 +10,23 @@ To use NGX Bootstrap Components in your project, install the package via npm:
 npm install @dotted-labs/ngx-bootstrap-components
 ```
 
-## 📖 Components
+## 📖 Components Index
 
-### Pagination Component
+- **Table**: A component that displays tabular data. [Read more
+  ![Component Preview](./assets/c1c93b25648cf820fbfe27afaf1c8516.png)
+  ](./projects/ngx-bootstrap-components/table/README.md)
 
-The `PaginationComponent` allows users to navigate through pages of data. It supports dynamic changes through Angular signals and adheres to the OnPush change detection strategy for performance optimization.
+- **Pagination**: A component that displays a set of pages, with a current page indicator and navigation buttons. [Read more
+  ![Component Preview](./assets/42d8aa8f31c97e72e535954e985fbbb7.png)
+  ](./projects/ngx-bootstrap-components/pagination/README.md)
 
-- **Inputs:**
+- **Image Input**: A component that allows users to select and preview images. [Read more
+  ![Component Preview](./assets/135036d14517e5224054a004c964ff52.png)
+  ](./projects/ngx-bootstrap-components/img-input/README.md)
 
-  - `sizeOptions`: Array of numbers to display per page options.
-  - `hasPreviousPage`: Boolean signal to indicate if there is a previous page.
-  - `hasNextPage`: Boolean signal to indicate if there is a next page.
-  - `page`: Current page number.
-  - `pageSize`: Number of items per page.
-  - `total`: Total number of items.
-  - `totalPages`: Total number of pages.
-
-- **Outputs:**
-  - `pageChange`: Emits the new page number when changed.
-  - `pageSizeChange`: Emits the new page size when changed.
-
-#### Example Usage
-
-To integrate the `PaginationComponent` in your Angular application, you can use the following HTML snippet:
-
-```ts
-import { PaginationComponent } from '@dotted-labs/ngx-bootstrap-components/pagination';
-```
-
-```html
-<dtl-pagination
-  [sizeOptions]="[10, 20, 50, 100]"
-  [hasPreviousPage]="hasPreviousPage$ | async"
-  [hasNextPage]="hasNextPage$ | async"
-  [page]="currentPage$ | async"
-  [pageSize]="currentPageSize$ | async"
-  [total]="totalItems$ | async"
-  [totalPages]="totalPages$ | async"
-  (pageChange)="onPageChange($event)"
-  (pageSizeChange)="onPageSizeChange($event)"
->
-</dtl-pagination>
-```
-
-### Table Component
-
-The `TableComponent` displays tabular data and includes features like skeleton screens for loading states, error handling, and empty states, all managed via Angular signals.
-
-- **Inputs:**
-  - `items`: Array of items to be displayed in the table.
-  - `columns`: Array of column headers.
-  - `isLoaded`: Boolean signal indicating if data is fully loaded.
-  - `isLoading`: Boolean signal indicating if data is currently loading.
-  - `isEmpty`: Boolean signal indicating if there are no data items to display.
-  - `error`: Signal for error messages.
-  - `skeletonRows`: Number of skeleton rows to display during loading.
-  - `rowTemplate`: Template for rendering table rows.
-
-#### Example Usage
-
-To integrate the `TableComponent` in your Angular application, you can use the following HTML snippet:
-
-```ts
-import { TableComponent } from '@dotted-labs/ngx-bootstrap-components/table';
-```
-
-```html
-<dtl-table
-  [items]="items$ | async"
-  [columns]="columns"
-  [isLoaded]="isLoaded$ | async"
-  [isLoading]="isLoading$ | async"
-  [isEmpty]="isEmpty$ | async"
-  [error]="error$ | async"
-  [skeletonRows]="skeletonRows"
-  [rowTemplate]="rowTemplate"
-></dtl-table>
-```
-
-### Image Input Component
-
-The `ImgInputComponent` is designed for image file inputs, providing a base64 preview and integration with Angular forms and signals.
-
-- **Properties:**
-
-  - `base64`: Base64 string of the selected image.
-  - `maxSize`: Maximum file size allowed.
-  - `formats`: Allowed image formats.
-
-- **Methods:**
-  - `onInputChange($event)`: Handles changes to the input field.
-
-#### Example Usage
-
-To integrate the `ImgInputComponent` in your Angular application, you can use the following HTML snippet:
-
-```ts
-import { ImgInputComponent } from '@dotted-labs/ngx-bootstrap-components/img-input';
-```
-
-```html
-<!-- Without ReactiveForms -->
-<dtl-img-input [maxSize]="maxSize" [formats]="formats" [(ngModel)]="value"></dtl-img-input>
-
-<!-- With ReactiveForms and formControl -->
-<dtl-img-input [maxSize]="maxSize" [formats]="formats" [formControl]="formControl"></dtl-img-input>
-
-<!-- With ReactiveForms and formControlName -->
-<dtl-img-input [maxSize]="maxSize" [formats]="formats" formControlName="formControlName"></dtl-img-input>
-```
+- **Side Bar**: A component that displays a side bar with a list of links. [Read more
+  ![Component Preview](./assets/40ed47bc132555e573bebf3aafdb67ff.png)
+  ](./projects/ngx-bootstrap-components/side-bar/README.md)
 
 ## 🛡️ License
 

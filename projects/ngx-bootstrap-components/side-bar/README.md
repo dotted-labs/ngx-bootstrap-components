@@ -1,5 +1,7 @@
 ### SideBar Component
 
+![Component Preview](../../../assets/40ed47bc132555e573bebf3aafdb67ff.png)
+
 The `SideBarComponent` is a component that is used to display a side bar with a menu of links. It supports dynamic changes through Angular signals and adheres to the OnPush change detection strategy for performance optimization.
 
 - **Inputs:**
@@ -14,7 +16,7 @@ The `SideBarComponent` is a component that is used to display a side bar with a 
 To integrate the `SideBarComponent` in your Angular application, you can use the following HTML snippet:
 
 ```ts
-import { SideBarComponent } from '@dotted-labs/ngx-bootstrap-components/side-bar';
+import { DtlSideBarComponent } from '@dotted-labs/ngx-bootstrap-components/side-bar';
 
 const menu: DtlSideBarMenu = [
   {
