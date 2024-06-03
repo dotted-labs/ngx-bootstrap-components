@@ -1,1 +1,1 @@
-export { ImgInputComponent } from './components/img-input/img-input.component';
+export { DtlImgInputComponent } from './components/img-input/img-input.component';

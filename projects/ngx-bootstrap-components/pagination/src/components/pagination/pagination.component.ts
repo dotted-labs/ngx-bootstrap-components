@@ -3,14 +3,14 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'dl-pagination',
+  selector: 'dtl-pagination',
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.scss'],
   standalone: true,
   imports: [FormsModule, TranslateModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PaginationComponent {
+export class DtlPaginationComponent {
   public sizeOptions: InputSignal<number[]> = input<number[]>([10, 20, 50, 100]);
   public hasPreviousPage: InputSignal<boolean> = input.required<boolean>();
   public hasNextPage: InputSignal<boolean> = input.required<boolean>();

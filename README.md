@@ -39,7 +39,7 @@ import { PaginationComponent } from '@dotted-labs/ngx-bootstrap-components/pagin
 ```
 
 ```html
-<dl-pagination
+<dtl-pagination
   [sizeOptions]="[10, 20, 50, 100]"
   [hasPreviousPage]="hasPreviousPage$ | async"
   [hasNextPage]="hasNextPage$ | async"
@@ -50,7 +50,7 @@ import { PaginationComponent } from '@dotted-labs/ngx-bootstrap-components/pagin
   (pageChange)="onPageChange($event)"
   (pageSizeChange)="onPageSizeChange($event)"
 >
-</dl-pagination>
+</dtl-pagination>
 ```
 
 ### Table Component
@@ -76,7 +76,7 @@ import { TableComponent } from '@dotted-labs/ngx-bootstrap-components/table';
 ```
 
 ```html
-<dl-table
+<dtl-table
   [items]="items$ | async"
   [columns]="columns"
   [isLoaded]="isLoaded$ | async"
@@ -85,7 +85,7 @@ import { TableComponent } from '@dotted-labs/ngx-bootstrap-components/table';
   [error]="error$ | async"
   [skeletonRows]="skeletonRows"
   [rowTemplate]="rowTemplate"
-></dl-table>
+></dtl-table>
 ```
 
 ### Image Input Component
@@ -111,13 +111,13 @@ import { ImgInputComponent } from '@dotted-labs/ngx-bootstrap-components/img-inp
 
 ```html
 <!-- Without ReactiveForms -->
-<dl-img-input [maxSize]="maxSize" [formats]="formats" [(ngModel)]="value"></dl-img-input>
+<dtl-img-input [maxSize]="maxSize" [formats]="formats" [(ngModel)]="value"></dtl-img-input>
 
 <!-- With ReactiveForms and formControl -->
-<dl-img-input [maxSize]="maxSize" [formats]="formats" [formControl]="formControl"></dl-img-input>
+<dtl-img-input [maxSize]="maxSize" [formats]="formats" [formControl]="formControl"></dtl-img-input>
 
 <!-- With ReactiveForms and formControlName -->
-<dl-img-input [maxSize]="maxSize" [formats]="formats" formControlName="formControlName"></dl-img-input>
+<dtl-img-input [maxSize]="maxSize" [formats]="formats" formControlName="formControlName"></dtl-img-input>
 ```
 
 ## 🛡️ License

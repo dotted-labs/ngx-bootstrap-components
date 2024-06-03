@@ -1,1 +1,1 @@
-export { PaginationComponent } from './components/pagination/pagination.component';
+export { DtlPaginationComponent } from './components/pagination/pagination.component';

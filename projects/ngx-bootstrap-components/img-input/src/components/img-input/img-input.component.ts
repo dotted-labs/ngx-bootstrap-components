@@ -1,9 +1,9 @@
-import { ChangeDetectorRef, Component, ElementRef, HostListener, effect, forwardRef, inject, signal } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, HostListener, forwardRef, inject, signal } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'dl-img-input',
+  selector: 'dtl-img-input',
   templateUrl: './img-input.component.html',
   styleUrls: ['./img-input.component.scss'],
   standalone: true,
@@ -11,12 +11,12 @@ import { TranslateModule } from '@ngx-translate/core';
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => ImgInputComponent),
+      useExisting: forwardRef(() => DtlImgInputComponent),
       multi: true,
     },
   ],
 })
-export class ImgInputComponent implements ControlValueAccessor {
+export class DtlImgInputComponent implements ControlValueAccessor {
   private readonly changeDetectorRef = inject(ChangeDetectorRef);
 
   // public value = input<File>();

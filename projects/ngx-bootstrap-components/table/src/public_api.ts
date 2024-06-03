@@ -1,1 +1,1 @@
-export { TableComponent } from './components/table/table.component';
+export { DtlTableComponent } from './components/table/table.component';

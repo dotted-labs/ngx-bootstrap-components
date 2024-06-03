@@ -3,14 +3,14 @@ import { ChangeDetectionStrategy, Component, InputSignal, Signal, TemplateRef, c
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'dl-table',
+  selector: 'dtl-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
   standalone: true,
   imports: [TranslateModule, NgTemplateOutlet],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TableComponent {
+export class DtlTableComponent {
   public items: InputSignal<unknown[]> = input.required<unknown[]>();
   public columns: InputSignal<string[]> = input.required<string[]>();
   public isLoaded: InputSignal<boolean> = input.required<boolean>();
