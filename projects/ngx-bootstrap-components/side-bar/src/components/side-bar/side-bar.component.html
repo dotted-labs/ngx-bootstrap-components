@@ -1,0 +1,25 @@
+<nav class="d-flex flex-column pb-2 pe-4 w-100 overflow-hidden position-relative">
+  @for (item of menu(); track item.title; let i = $index) {
+    @if (item.title) {
+      <b class="px-2 py-1 mb-0 small text-secondary text-opacity-50 text-uppercase" [class.mt-4]="i !== 0">
+        {{ item.title | translate }}
+      </b>
+    }
+    <ul class="nav nav-pills flex-column gap-1" [class.mb-auto]="i === menu().length - 1">
+      @for (navItem of item.items; track navItem.name) {
+        <li class="nav-item">
+          <a
+            (click)="navigateTo(navItem)"
+            [class.text-opacity-50]="!navItem.active"
+            routerLinkActive="active"
+            class="nav-link rounded-2"
+            aria-current="page"
+          >
+            <i class="pe-none fs-6 fw-light me-3" [class]="navItem.icon"></i>
+            {{ navItem.name }}
+          </a>
+        </li>
+      }
+    </ul>
+  }
+</nav>
