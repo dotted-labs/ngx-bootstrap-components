@@ -11,7 +11,7 @@
           <a
             (click)="navigateTo(navItem)"
             [class.text-opacity-50]="!navItem.isEnabled"
-            [class.active]="navItem.url.includes(currentUrl())"
+            [class.active]="currentUrl().includes(navItem.url)"
             class="nav-link rounded-2"
             aria-current="page"
           >

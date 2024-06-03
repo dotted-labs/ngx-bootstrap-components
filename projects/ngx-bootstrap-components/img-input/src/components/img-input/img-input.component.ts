@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, HostListener, forwardRef, inject, signal } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener, forwardRef, inject, signal } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -36,8 +36,6 @@ export class DtlImgInputComponent implements ControlValueAccessor {
     const file = event && event.item(0);
     this.onChange(file);
   }
-
-  constructor(private host: ElementRef<HTMLInputElement>) {}
 
   public clearImage(): void {
     this.base64 = '';
