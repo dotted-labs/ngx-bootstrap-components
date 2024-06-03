@@ -3,7 +3,7 @@ import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/f
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-img-input',
+  selector: 'dl-img-input',
   templateUrl: './img-input.component.html',
   styleUrls: ['./img-input.component.scss'],
   standalone: true,

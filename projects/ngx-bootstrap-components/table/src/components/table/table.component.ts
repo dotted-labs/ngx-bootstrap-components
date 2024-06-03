@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, InputSignal, Signal, TemplateRef, c
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-table',
+  selector: 'dl-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
   standalone: true,
