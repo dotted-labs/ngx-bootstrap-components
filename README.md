@@ -1,5 +1,15 @@
 # NGX Bootstrap Components
 
+<p >
+  <a href="https://www.npmjs.com/package/@dotted-labs/ngx-bootstrap-components">
+    <img src="https://img.shields.io/npm/v/@dotted-labs/ngx-bootstrap-components" alt="NPM">
+  </a>
+  <a href="https://www.npmjs.com/package/@dotted-labs/ngx-bootstrap-components">
+    <img src="https://img.shields.io/npm/dm/@dotted-labs/ngx-bootstrap-components" alt="npm downloads">
+  </a>
+  <img src="https://img.shields.io/github/license/dotted-labs/ngx-bootstrap-components" alt="MIT">
+</p>
+
 This library provides a set of Angular components integrated with Bootstrap, designed to be used with Angular's latest features like signals and the OnPush change detection strategy. The components are standalone, meaning they can be imported directly without the need for an encompassing Angular module.
 
 ## 🚀 Installation
