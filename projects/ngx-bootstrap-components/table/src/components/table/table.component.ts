@@ -20,4 +20,6 @@ export class DtlTableComponent {
   public skeletonRows: InputSignal<number> = input<number>(10);
   public skeletonRowsArr: Signal<number[]> = computed<number[]>(() => Array(this.skeletonRows()));
   public rowTemplate: InputSignal<TemplateRef<unknown>> = input.required<TemplateRef<unknown>>();
+
+  public isClickable: InputSignal<boolean> = input<boolean>(true);
 }
