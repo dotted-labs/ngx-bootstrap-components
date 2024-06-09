@@ -28,6 +28,24 @@
           }
         </tr>
       }
+    } @else if (isEmpty()) {
+      <tr class="pe-none">
+        <td colspan="1000">
+          @if (emptyTemplate()) {
+            <ng-container [ngTemplateOutlet]="emptyTemplate()"></ng-container>
+          } @else {
+            <div
+              style="min-height: 300px"
+              class="empty-section w-100 h-100 d-flex flex-column justify-content-center align-items-center p-5"
+            >
+              <i class="fs-2 mb-3 ti ti-prompt"></i>
+              <h6 class="text-body-secondary">
+                {{ 'COMMON.NO_ITEMS_FOUND' | translate }}
+              </h6>
+            </div>
+          }
+        </td>
+      </tr>
     } @else {
       @for (item of items(); track item) {
         @if (rowTemplate()) {

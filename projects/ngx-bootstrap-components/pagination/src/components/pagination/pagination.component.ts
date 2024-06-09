@@ -18,6 +18,7 @@ export class DtlPaginationComponent {
   public pageSize: InputSignal<number> = input<number>(10);
   public total: InputSignal<number> = input.required<number>();
   public totalPages: InputSignal<number> = input.required<number>();
+  public itemName: InputSignal<string> = input<string>('items');
 
   public pageChange = output<number>();
   public pageSizeChange = output<number>();
