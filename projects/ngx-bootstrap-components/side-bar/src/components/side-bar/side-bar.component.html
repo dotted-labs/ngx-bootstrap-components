@@ -1,4 +1,5 @@
 <nav class="d-flex flex-column pb-2 pe-4 w-100 overflow-hidden position-relative">
+  <ng-content select="[header]"></ng-content>
   @for (item of menu(); track item.title; let i = $index) {
     @if (item.title) {
       <b class="px-2 py-1 mb-0 small text-secondary text-opacity-50 text-uppercase" [class.mt-4]="i !== 0">
@@ -22,4 +23,5 @@
       }
     </ul>
   }
+  <ng-content select="[footer]"></ng-content>
 </nav>
