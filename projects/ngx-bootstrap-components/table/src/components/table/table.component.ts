@@ -1,5 +1,15 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { ChangeDetectionStrategy, Component, InputSignal, Signal, TemplateRef, computed, input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  InputSignal,
+  OutputEmitterRef,
+  Signal,
+  TemplateRef,
+  computed,
+  input,
+  output,
+} from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -11,7 +21,7 @@ import { TranslateModule } from '@ngx-translate/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DtlTableComponent {
-  public items: InputSignal<unknown[]> = input.required<unknown[]>();
+  public items: InputSignal<({ id: string } & unknown)[]> = input.required<({ id: string } & unknown)[]>();
   public columns: InputSignal<string[]> = input.required<string[]>();
   public isLoaded: InputSignal<boolean> = input.required<boolean>();
   public isLoading: InputSignal<boolean> = input.required<boolean>();
@@ -21,6 +31,9 @@ export class DtlTableComponent {
   public skeletonRowsArr: Signal<number[]> = computed<number[]>(() => Array(this.skeletonRows()));
   public rowTemplate: InputSignal<TemplateRef<unknown>> = input.required<TemplateRef<unknown>>();
   public emptyTemplate: InputSignal<TemplateRef<unknown>> = input<TemplateRef<unknown>>();
-
+  public iconTemplate: InputSignal<TemplateRef<unknown>> = input<TemplateRef<unknown>>();
+  public selectedIds: InputSignal<unknown[]> = input<unknown[]>();
   public isClickable: InputSignal<boolean> = input<boolean>(true);
+
+  public selectItem: OutputEmitterRef<unknown> = output<unknown>();
 }
