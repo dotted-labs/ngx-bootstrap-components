@@ -1,6 +1,6 @@
 {
   "name": "@dotted-labs/ngx-bootstrap-components",
-  "version": "1.0.0",
+  "version": "0.1.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
